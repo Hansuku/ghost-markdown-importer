@@ -1,5 +1,7 @@
 # Ghost Markdown Importer
 
+[中文版本](README.zh-CN.md) | English Version
+
 A powerful Rust CLI tool that converts Markdown files to Ghost CMS import format (JSON or ZIP package).
 
 ## Features
@@ -15,6 +17,30 @@ A powerful Rust CLI tool that converts Markdown files to Ghost CMS import format
 
 ## Installation
 
+### Quick Install (Recommended)
+Download the latest pre-built binary for your platform:
+
+- **Linux x86_64**: [gmi-linux-x86_64.tar.gz](https://github.com/Hansuku/ghost-markdown-importer/releases/latest/download/gmi-linux-x86_64.tar.gz)
+- **macOS Intel**: [gmi-macos-x86_64.tar.gz](https://github.com/Hansuku/ghost-markdown-importer/releases/latest/download/gmi-macos-x86_64.tar.gz)
+- **macOS Apple Silicon**: [gmi-macos-arm64.tar.gz](https://github.com/Hansuku/ghost-markdown-importer/releases/latest/download/gmi-macos-arm64.tar.gz)
+- **Windows x86_64**: [gmi-windows-x86_64.zip](https://github.com/Hansuku/ghost-markdown-importer/releases/latest/download/gmi-windows-x86_64.zip)
+
+#### Linux/macOS
+```bash
+# Download and install (replace with your platform)
+curl -L -o gmi.tar.gz https://github.com/Hansuku/ghost-markdown-importer/releases/latest/download/gmi-linux-x86_64.tar.gz
+tar -xzf gmi.tar.gz
+sudo mv gmi /usr/local/bin/
+
+# Verify installation
+gmi --help
+```
+
+#### Windows
+1. Download the Windows zip file from releases
+2. Extract `gmi.exe` to a folder in your PATH
+3. Open Command Prompt and run: `gmi --help`
+
 ### From Source
 ```bash
 git clone https://github.com/Hansuku/ghost-markdown-importer.git
@@ -25,6 +51,29 @@ cargo install --path .
 ### From Crates.io (when published)
 ```bash
 cargo install ghost-markdown-importer
+```
+
+## Quick Start
+
+### 1. Download Binary (30 seconds)
+```bash
+# Linux/macOS - One-line install
+curl -sSL https://raw.githubusercontent.com/Hansuku/ghost-markdown-importer/main/install.sh | bash
+
+# Or manual download
+# Visit https://github.com/Hansuku/ghost-markdown-importer/releases/latest
+```
+
+### 2. Basic Usage
+```bash
+# Convert markdown files in current directory
+gmi ./my-blog-posts
+
+# Specify output file
+gmi ./content --output ghost-import.json
+
+# Create ZIP package with images
+gmi ./content --format zip --output blog-export.zip --include-images
 ```
 
 ## Usage
@@ -276,6 +325,29 @@ sudo mv gmi /usr/local/bin/
 
 # Windows
 # Extract the zip file and move gmi.exe to a directory in your PATH
+```
+
+## Quick Start
+
+### 1. Download Binary (30 seconds)
+```bash
+# Linux/macOS - One-line install
+curl -sSL https://raw.githubusercontent.com/Hansuku/ghost-markdown-importer/main/install.sh | bash
+
+# Or manual download
+# Visit https://github.com/Hansuku/ghost-markdown-importer/releases/latest
+```
+
+### 2. Basic Usage
+```bash
+# Convert markdown files in current directory
+gmi ./my-blog-posts
+
+# Specify output file
+gmi ./content --output ghost-import.json
+
+# Create ZIP package with images
+gmi ./content --format zip --output blog-export.zip --include-images
 ```
 
 ## Usage
