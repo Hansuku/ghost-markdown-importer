@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "exported_on": 1753093286458,
+    "version": "5.75.1"
+  },
+  "data": {
+    "posts": [
+      {
+        "id": 1,
+        "title": "Untitled Post 1",
+        "slug": "untitled-post-1",
+        "html": "<hr />\n<h2>title: 'webpack3.x初始配置'\ndate: 2017-11-04 10:51:08\ntags: ['seo', 'VUE']\ndraft: false\nsummary: 'webPack 可以看做是模块打包机：它做的事情是，分析你的项目结构，找到 JavaScript 模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript 等），并将其打包为合适的格式以供浏览器使...'\nimages: ['https://www.hansuku.com/wp-content/themes/Lover/images/thumbs/1.jpg']\nauthors: ['default']\nlayout: PostLayout</h2>\n<h1>webpack3.x初始配置</h1>\n<p>这是一个关于webpack3.x配置的详细教程。</p>\n<h2>什么是webpack</h2>\n<p>webpack 可以看做是模块打包机：它做的事情是，分析你的项目结构，找到 JavaScript 模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript 等），并将其打包为合适的格式以供浏览器使用。</p>\n<h2>核心概念</h2>\n<ul>\n<li><strong>Entry</strong>: 入口起点</li>\n<li><strong>Output</strong>: 输出配置</li>\n<li><strong>Loaders</strong>: 模块转换器</li>\n<li><strong>Plugins</strong>: 插件扩展</li>\n</ul>\n<h2>示例配置</h2>\n<pre><code class=\"language-javascript\">const path = require('path');\n\nmodule.exports = {\n  entry: './src/index.js',\n  output: {\n    path: path.resolve(__dirname, 'dist'),\n    filename: 'bundle.js'\n  },\n  module: {\n    rules: [\n      {\n        test: /\\.js$/,\n        use: 'babel-loader'\n      }\n    ]\n  }\n};\n</code></pre>\n",
+        "featured": 0,
+        "status": "published",
+        "type": "post",
+        "published_at": "2025-07-21T10:21:26.458742Z",
+        "created_at": "2025-07-21T10:21:26.458743Z",
+        "updated_at": "2025-07-21T10:21:26.458743Z",
+        "visibility": "public",
+        "show_title_and_feature_image": 1,
+        "email_only": 0
+      }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "General",
+        "slug": "general",
+        "created_at": "2025-07-21T10:21:26.458747Z",
+        "updated_at": "2025-07-21T10:21:26.458747Z"
+      }
+    ],
+    "users": [
+      {
+        "id": 2,
+        "name": "Default Author",
+        "slug": "default-author",
+        "email": "default-author@example.com",
+        "created_at": "2025-07-21T10:21:26.458746Z",
+        "updated_at": "2025-07-21T10:21:26.458746Z"
+      }
+    ],
+    "posts_authors": [
+      {
+        "id": 3,
+        "post_id": 1,
+        "author_id": 2
+      }
+    ]
+  }
+}
